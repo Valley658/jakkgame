@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JakkGame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <header>
+        <h1>JakkGame</h1>
+    </header>
+
+    <main>
+        <div id="settings-container">
+            <label for="mode-select">Select Mode:</label>
+            <select id="mode-select">
+                <option value="classic">Classic</option>
+                <option value="timed">Timed</option>
+                <option value="survival">Survival</option>
+                <option value="endless">Endless</option>
+            </select>
+
+            <div id="timed-settings" class="hidden">
+                <label for="time-select">Select Time (seconds):</label>
+                <select id="time-select">
+                    <option value="30">30</option>
+                    <option value="60">60</option>
+                    <option value="90">90</option>
+                </select>
+            </div>
+
+            <label for="difficulty-select">Select Difficulty:</label>
+            <select id="difficulty-select">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="extreme">Extreme</option>
+                <option value="insane">Insane</option>
+            </select>
+            <button id="apply-settings">Apply Settings</button>
+        </div>
+
+        <div id="game-status" class="hidden">
+            <p>Mode: <span id="current-mode"></span></p>
+            <p>Difficulty: <span id="current-difficulty"></span></p>
+        </div>
+
+        <div id="game-container">
+            <img id="star" src="assets/images/star.png" alt="Star">
+            <button id="start-button">Start Game</button>
+            <p id="score">Score: 0</p>
+            <p id="timer" style="display: none;">Time Left: 30s</p>
+        </div>
+
+        <div id="scoreboard" class="hidden">
+            <h2>Game Over!</h2>
+            <p>Your Score: <span id="final-score"></span></p>
+            <p>Your Best Score: <span id="best-score">0</span></p>
+            <button id="play-again">Play Again</button>
+        </div>
+
+        <div id="save-popup" class="hidden">
+            <p>Would you like to save your score?</p>
+            <button id="save-yes">Yes</button>
+            <button id="save-no">No</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; JakkGame. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
